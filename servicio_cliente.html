@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicio al Cliente</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/Servicioclientes.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg menu navbar-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+         
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container my-5">
+        <h2>Contactos de Servicio al Cliente</h2>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Teléfono</th>
+            </tr>
+          </thead>
+          <tbody id="contactos-body"></tbody>
+        </table>
+      </div>
+    </main>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="formularioContacto" onsubmit="enviarFormulario(event)">
+          <label for="nombre">
+            <i class="bi bi-person"></i> Nombre:
+          </label>
+          <input type="text" id="nombre" name="nombre" required>
+      
+          <label for="email">
+            <i class="bi bi-envelope"></i> Correo Electrónico:
+          </label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="telefono">
+            <i class="bi bi-telephone"></i> Teléfono:
+          </label>
+          <input type="tel" id="telefono" name="telefono" required>
+      
+          <label for="mensaje">
+            <i class="bi bi-chat-dots"></i> ¿Qué duda tienes?:
+          </label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+      
+          <button type="submit">
+            <i class="bi bi-arrow-right"></i> Enviar Mensaje
+          </button>
+        </form>
+      </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="./src/controllers/controladorServicioCliente.js"
+      type="module"
+    ></script>
+  </body>
+</html>
